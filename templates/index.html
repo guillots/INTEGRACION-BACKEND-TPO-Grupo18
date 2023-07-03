@@ -1,0 +1,163 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ProDigital Strategies - Marketing</title>
+    <link rel="stylesheet" href="{% static './css/estilo.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static  './media/favicon/favicon-02.png' %}">
+    <!-- <link rel="stylesheet" href="https://imagenes.lainformacion.com/files/twitter_thumbnail/uploads/imagenes/2022/04/23/sandwich-de-miga-triple.jpeg"/> -->
+    <!-- <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg1.freepng.es%2F20180726%2Fyhx%2Fkisspng-black-m-sleeve-bluza-zipper-champion-chris-evans-5b596561bcc275.2006792115325853137732.jpg&tbnid=naA7_6-8xnDOkM&vet=12ahUKEwjN8-PNq-T-AhW7rZUCHVo6BdYQMygCegUIARCgAQ..i&imgrefurl=https%3A%2F%2Fwww.freepng.es%2Fhd-png%2Fchris-evans.html&docid=PqbNsH0FieQG9M&w=260&h=520&q=chris%20evans%20foto%20sin%20fondo&ved=2ahUKEwjN8-PNq-T-AhW7rZUCHVo6BdYQMygCegUIARCgAQ" alt=""> -->
+    <script src="https://kit.fontawesome.com/399659288b.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-gral">
+        <img class="logo-img" src="{% static './media/favicon/favicon-01.png' %}" alt="" width="100px" height="100px">
+        <a href="#" class="logo-palabra">ProDigital Strategies</a>
+      </div>
+      <nav>
+        <button class="my-button" id="my-button">
+          <i class="fas fa-bars"></i>
+      </button>
+        <ul id="mynav">
+          <li><a class="links" href="#quienes-somos">Quiénes Somos</a></li>
+          <li><a class="links" href="#servicios">Servicios</a></li>
+          <li><a class="links" href="#clientes">Clientes</a></li>
+          <li><a class="links" href="#contacto">Contáctanos</a></li>
+        </ul>
+      </nav>    
+    </header>
+    <section class="toma5"></section>
+
+    <main>
+      <section class="potencia">
+        <div class="container">
+          <div class="titulo-headline">
+            <h1 class="bienvenidos">Potencia tu </h1>
+              <div class="headline">
+                <div class="markdig1">Transforma tu negocio</div>
+                <div class="markdig2">con estrategias digitales</div>
+                <div class="markdig3">de </div>
+              </div>
+          </div>
+            <img class="persona" class="slide-bottom" src="{% static './media/imagenes/mujer1.png' %}" alt="imagen-mujer">
+        </div>
+      </section>
+
+      <section class="container-quienes-somos" id="quienes-somos">
+          <div class="cuadrado">
+              <h2 class="contenido-quienes-somos">¿Quienes Somos?</h2>
+              <p class="contenido-quienes-somos">Nos apasiona impulsar el éxito en línea de nuestros clientes. Con un enfoque estratégico y creativo, nos esforzamos por brindar soluciones personalizadas que generen resultados tangibles. Nuestro equipo de expertos en SEO, SEM y redes sociales está dedicado a aumentar la visibilidad de las marcas y atraer tráfico de calidad. Nos enorgullece ayudar a nuestros clientes a convertir visitantes en clientes y a construir relaciones duraderas con su audiencia. Confía en nosotros para potenciar tu presencia en línea y tus objetivos de crecimiento en el mundo digital.
+                
+                <br><br>
+              </p>
+            </div>            
+      </section>
+      
+      <section id="servicios">
+        <h1>Servicios</h1>
+        <div class="mosaico">
+          <h3>Estrategia de marketing digital</h3>
+          <p>Objetivos claros, audiencia definida, canales variados, contenido relevante, análisis constante.</p>
+        </div>
+        <div class="mosaico">
+          <h3>Analítica web</h3>  
+          <p>Métricas, seguimiento, interpretación, informes, mejora.</p>
+        </div>
+        <div class="mosaico">
+          <h3>Optimización en motores de búsqueda (SEO)</h3>
+          <p>Contenido relevante para palabras claver, etiquetas, enlaces, posicionamiento.</p>
+        </div>
+        <div class="mosaico">
+          <h3>Publicidad en motores de búsqueda (SEM)</h3>
+          <p>Resultados garantizados, alcance amplio, segmentación precisa, anuncios efectivos, optimización continua.</p>
+        </div>
+      </section>
+      
+      <section id="clientes">
+        <h3 class="clientestitulo">Nuestros Clientes</h3>
+        <div class="carrousel">
+          <ul>
+              <li>
+                  <img src="{% static './media/imagenes/adidas-logo-png-2380.png' %}" alt="">
+              </li>
+              <li>
+                  <img src="{% static './media/imagenes/google-logo-9808.png' %}" alt="">
+              </li>
+              <li>
+                  <img src="{% static './media/imagenes/netflix-logo-png-2616.png' %}" alt="">
+              </li>
+              <li>
+                  <img src="{% static './media/imagenes/nissan-logo-701.png' %}" alt="">
+              </li>
+              <li>
+                  <img src="{% static './media/imagenes/pics-photos-instagram-logo-png-4.png' %}" alt="">
+              </li>
+              <li>
+                  <img src="{% static './media/imagenes/starbucks-logo-png-1666.png' %}" alt="">
+              </li>
+          </ul>
+          </div>
+      </section>
+
+      <!-- <section id="contacto">
+        <h3>Contáctanos</h3>
+        <form action="https://sheetdb.io/api/v1/jzjg8nkfdt35b" method="post"  id="contact-form">
+          Nombre:
+          <input class="form-control" type="text" name="data[nombre]" required/>
+          Email:
+          <input class="form-control" type="email" name="data[email]" required/>
+          Mensaje:
+          <textarea class="form-control"  name="data[mensaje]" required></textarea>
+          <button class="button-verde" type="submit" id="botoncito" class="formsubmit" >Enviar</button>
+        </form>
+      </section> -->
+
+      <section id="contacto">
+        <h3 class="contactotitulo">Contáctanos</h3>
+        <form action="https://sheetdb.io/api/v1/jzjg8nkfdt35b" method="post" class="form" id="contact-form">
+          <div class="form-contenedor"> 
+            <div class="formgroup">
+            <input type="text" id="name" class="forminput" placeholder=" " name="data[nombre]" required/>
+            <label for="name" class="formlabel">Nombre</label>
+          <span class="formlinea"></span>
+            </div>
+            <div class="formgroup">
+              <input type="text" id="email" class="forminput" placeholder=" " name="data[email]" required/>
+              <label for="email" class="formlabel">Email</label>
+              <span class="formlinea"></span>
+            </div>
+            <div class="formgroup">
+              <input type="text" id="mensaje" class="forminput" placeholder=" " name="data[mensaje]" required/>
+              <label for="mensaje" class="formlabel">Mensaje</label>
+              <span class="formlinea"></span>
+            </div>
+            <input type="submit" id="botoncito" class="formsubmit" value="Enviar">
+            <!-- <button class="button-verde" type="submit" id="botoncito" class="formsubmit" >Enviar</button> -->
+        </form>
+      </section>
+
+
+
+
+    </main>
+    
+    <footer>
+      <div>
+        <p><link rel="stylesheet" href="https://imagenes.lainformacion.com/files/twitter_thumbnail/uploads/imagenes/2022/04/23/sandwich-de-miga-triple.jpeg">SDM DEV</p>
+        <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="http://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <i class="fa-brands fa-tiktok"></i>
+      </div>
+    
+    </footer>    
+    
+    <script src="{% static './js/script.js' %}"></script>
+  </body>
+</html>

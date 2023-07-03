@@ -1,0 +1,863 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    /* Paleta de colores */
+    --color-verde-oscuro: #A7BF4E; 
+    --color-verde-claro: #D4F266;
+    --color-casi-blanco: #F2F2F2;
+    --color-gris: #404040;
+    --color-gris-oscuro: #0D0D0D;
+    /* Borde predeterminado */
+    --borde-chequeo: 1px solid tomato;
+    --tamano-titulo: 2.5rem;
+    /* prueba de colores */
+    
+}
+
+/* GRAL */
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: 'Inter', sans-serif;
+    background: var(--color-casi-blanco);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+h1 { font-size: 2.5rem;}
+h2 { font-size: 2rem;}
+h3 { font-size: 1.75rem;}
+h4 { font-size: 1.5rem;}
+
+p { 
+    font-size: 1rem;
+}
+
+a { 
+    text-decoration: none;
+    color: black;
+}
+
+button { 
+    display: inline-block;
+    font-size: 18px;
+    padding: 12px 20px;
+}
+
+::-webkit-scrollbar {
+    width: 1em !important;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-gris-oscuro) !important;
+    outline: 0px solid #000000 !important;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, .2) !important;
+}
+/* ------------------------------ */
+
+/* HEADER NAV */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.8s;
+    padding: 20px 20px;
+    z-index: 10;
+}
+
+.abajo {
+    background: var(--color-casi-blanco) ;
+    
+    padding: 15px 20px;
+}
+
+.logo-gral {
+    display: flex;        
+    align-items: center;
+    transition: 1,5s;
+    text-decoration: none;
+    gap: 15px;
+}
+
+.logo-palabra {
+    color: var(--color-gris-oscuro);
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: grey;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.8s;
+}
+
+header ul li a:hover {
+    color: var(--color-gris-oscuro);
+}
+
+header {
+    position: sticky;
+    width: 100%;
+    height: 15vh;
+    background-color: var(--color-casi-blanco);
+    background-position: center center;
+}
+/* ------------------------------ */
+
+/* HERO */
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "titulo-headline persona"
+        "titulo-headline persona"
+        "titulo-headline persona"
+        "titulo-headline persona";
+    /* grid-gap: 2rem; */
+    /* border: 5px solid green; */
+    background-color: var(--color-casi-blanco);
+    
+}
+
+.titulo-headline{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 5rem;
+    grid-area: titulo-headline;
+    /* border: solid red ; */
+}
+
+.bienvenidos{    
+    grid-area: bienvenidos;
+    margin-left: 2rem;
+    font-size: 3rem;
+    /* border: 1px solid red;
+    background-color: #404041; */    
+}
+
+.bienvenidos::after{
+    content: "éxito digital";
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-verde-oscuro);
+    text-decoration: underline;
+}
+
+.headline {
+    /* grid-area: headline;    
+    margin-left: 10rem;  */
+    font-weight: 400;
+    font-size: 2rem;
+    
+}
+
+.markdig3::after{
+    content: "vanguardia.";
+    font-weight: 800;
+    font-style: italic;
+    color: var(--color-verde-oscuro);
+    text-decoration: underline;
+}
+
+
+.persona{
+    grid-area: persona;
+    height: 50vh;
+    position: relative;
+    /* border: 1px solid red;
+    background-color: burlywood; */
+}
+/* ------------------------------ */
+
+/* QUIENES SOMOS */
+
+.container-quienes-somos {
+    display: flex;
+    padding: 50px 0;
+    background-color: var(--color-gris);
+    /* border: var(--borde-chequeo); */
+}
+
+.container-quienes-somos > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background-color: var(--color-gris);
+    width: 75%;
+    border-radius: 50px;
+    box-shadow: 1px 1px 50px var(--color-gris-oscuro);
+
+}
+.container-quienes-somos > div > h2{
+    font-size: var(--tamano-titulo);
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+.container-quienes-somos > div > p{
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 10px;
+    margin: 35px;
+    border-radius: 10px;
+    
+}
+
+.contenido-quienes-somos {
+    color: var(--color-casi-blanco);
+    font-weight: 500;
+}
+
+/* .circulo {
+    position: relative;
+    width: 100px;
+    align-self: flex-end;
+    border: var(--borde-chequeo);
+} */
+/* ------------------------------ */
+
+
+
+/* SERVICIOS */
+#servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    /* border: 2px solid #A7BF4E; */
+    border-top: none;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+  }
+  
+  #servicios > h1 {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: var(--color-gris-oscuro);
+    letter-spacing: 1px;
+    font-size: var(--tamano-titulo);
+  }
+  
+  .mosaico {
+    flex: 0 0 calc(50% - 20px);
+    background-color: var(--color-gris);
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 8px;
+    transition: background-color 0.3s, border-color 0.3s;
+    border: 2px solid var(--color-gris);
+  }
+  
+  .mosaico:hover {
+    background-color: var(--color-verde-oscuro);
+    border-color: var(--color-verde-oscuro);
+  }
+  
+  .mosaico h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .mosaico p {
+    margin-bottom: 0;
+  }
+/* ------------------------------ */
+
+/* NUESTROS CLIENTES */
+.clientestitulo{
+    display: flex;
+    justify-content: center;
+    font-size: var(--tamano-titulo);
+}
+
+.carrousel{
+    width: 15%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carrousel ul{
+    display: flex;
+    animation: cambio 10s infinite alternate ease-in-out;
+    width: 600%;
+}
+.carrousel li{
+    width: 100%;
+    list-style: none;
+}
+.carrousel img{
+    width: 100%;
+    height: 100%;
+}
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+/* ------------------------------ */
+
+
+/* FORMULARIO  OLD*/
+
+/* form label { 
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+form .form-control { 
+    display: block;
+    width: 100%;
+    padding: .375rem .7rem;
+    font-size: 1rem;
+}
+
+#contacto{
+    margin: 50px;
+}
+
+#contacto form { 
+    width: 60%;
+    margin: 0 auto;
+}
+
+#contacto button { 
+    width: 100%
+}
+
+#contacto > h3 {
+    font-size: var(--tamano-titulo);
+    display: flex;
+    justify-content: center;
+} */
+/* ------------------------------ */
+
+/* FORMULARIO */
+
+#contacto { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: var(--color-casi-blanco);
+  /* margin: auto; */
+  /* width: 100%;
+  max-width: 500px; */
+  padding: 4.5em 2em;
+  text-align: center;
+} 
+
+.contactotitulo {
+  font-size: 2rem;
+  /* border: var(--borde-chequeo); */
+}
+
+.formgroup {
+  margin-top: 3em;
+  gap: 2.5em;
+}
+
+.form-contenedor {
+  position: relative;
+  color: var(--color-verde-oscuro);
+}
+
+.forminput {
+  width: 100%;
+  background: none;
+  color: var(--color-gris);
+  font-size: 1rem;
+  padding: .6em .3em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color-gris-oscuro);
+  font-family: 'Inter', sans-serif;
+}
+
+.formlabel {
+  color: var (--color-gris);
+  top: 0;
+  left: 5px;
+  transform: translateY(10px);
+  transition: transform .5s color .3s;
+}
+
+input#botoncito {
+  background: var(--color-gris);
+  color: var(--color-verde-claro);
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  font-weight: 250;
+  font-size: 1em;
+  margin: 15px;
+  padding: .5em 5em;
+  border: none;
+  border-radius: .5em;
+}
+
+#botoncito:hover {
+  background-color: var(--color-gris-oscuro);
+}
+
+
+/* FOOTER */
+footer { 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    color: var(--color-casi-blanco);
+    background-color: var(--color-gris-oscuro);
+}
+
+footer > div > a {
+    color: var(--color-casi-blanco);
+}
+
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+
+
+
+
+/* MOBILE */
+
+.my-button {
+    background-color: transparent;
+    border: 10px;
+    color: black;
+    cursor: pointer;
+    font-size: 30px;
+    margin-left: 32px;
+    float: left;
+    line-height: 70px;
+    display: none;
+  }
+
+.my-button:focus {
+    outline: none;
+  }
+
+@media (max-width: 506px) {
+
+    /* .persona {      
+      animation: 1s slideout;
+      z-index: -1;
+    }
+
+    @keyframes slideout {
+      from {
+        transform: translateX(0px);
+      }
+
+      to {
+        transform: translateX(1000px);
+      }
+      
+    } */
+    
+    
+    .persona {      
+      display: none;
+  }
+    
+    .container{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: var(--borde-chequeo); */
+        margin-top: 5%;
+        margin-bottom: 5%;
+        
+
+    }
+       
+    .titulo-headline{
+      font-size: 1.5em;
+    }
+   
+    
+    .bienvenidos::after{
+        content: "éxito digital";
+        font-weight: 900;
+        font-style: italic;
+        color: var(--color-verde-oscuro);
+        text-decoration: underline;
+    }
+    
+    .headline {
+        /* grid-area: headline;    
+        margin-left: 10rem;  */
+        font-weight: 400;
+        font-size: 1.5rem;
+        text-align: left;
+        
+    }
+    
+    .markdig3::after{
+        content: "vanguardia.";
+        font-weight: 800;
+        font-style: italic;
+        color: var(--color-verde-oscuro);
+        text-decoration: underline;
+    }
+
+
+
+    /*------------------------------------------*/
+    .container-quienes-somos {
+      flex-direction: column;
+      padding: 30px 0;
+      opacity: 100%;
+      transition: 1s;
+    }
+  
+    .container-quienes-somos > div {
+      background-color: var(--color-gris);
+      margin: auto;
+      width: 95%;
+      /* border: 2px solid #000000; */
+	    border-radius: 10px;
+    }
+
+    .container-quienes-somos > div > h2 {
+      text-align: center;
+      /* border: 2px solid var(--color-verde-claro); */      
+  }
+  
+    .container-quienes-somos > div > p {
+        text-align: center;
+        padding: 10px;
+        /* border: 2px solid var(--color-verde-claro); */
+	      border-radius: 10px;
+        font-size: 0.9em;
+    }
+
+  
+    
+
+    /*------------------------------------------*/
+
+    header {
+        padding: 10px;
+      }
+    
+      header.abajo {
+        padding: 10px;
+      }
+    
+      .logo-gral {
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+    
+      .logo-palabra {
+        font-size: 1.5em;
+      }
+    
+      header ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+    
+      .links {
+        font-size: 0.8em;
+      }
+      nav ul {        
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      nav ul .show {
+        display: flex;
+      }
+      
+      .my-button {
+        border: 2px solid var(--color-verde-claro);
+	      border-radius: 10px;
+        display: flex;
+        color: var(--color-gris-oscuro);
+      }
+
+      /*-----------------------------------*/
+
+      #servicios {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+      
+      #servicios > h1 {
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+        color: var(--color-gris-oscuro);
+        letter-spacing: 1px;
+        font-size: var(--tamano-titulo);
+      }
+      
+      .mosaico {
+        flex: 0 0 100%;
+        background-color: var(--color-gris);
+        color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        margin-bottom: 20px;
+        transition: background-color 0.3s, border-color 0.3s;
+        border: 2px solid var(--color-gris);
+      }
+      
+      .mosaico:hover {
+        background-color: var(--color-verde-oscuro);
+        border-color: var(--color-verde-oscuro);
+      }
+      
+      .mosaico h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      
+      .mosaico p {
+        margin-bottom: 0;
+      }
+
+  }
+
+
+  /* TABLET */
+
+@media (max-width: 1024px) {
+
+    .persona {
+      height: 25vh;
+      transition: 0.5s ease-in-out;
+      /* border: var(--borde-chequeo); */
+    }
+    
+    .container{
+        display: flex;
+        align-items: center;
+        /* border: var(--borde-chequeo); */
+
+
+    }
+       
+    .bienvenidos{    
+        
+        /* margin-left: 2rem; */
+        font-size: 2rem;
+        /* border: 1px solid red;
+        background-color: #404041; */
+         
+    }
+    
+    .bienvenidos::after{
+        content: "éxito digital";
+        font-weight: 900;
+        font-style: italic;
+        color: var(--color-verde-oscuro);
+        text-decoration: underline;
+    }
+    
+    .headline {
+        /* grid-area: headline;    
+        margin-left: 10rem;  */
+        font-weight: 400;
+        font-size: 1.5rem;
+        text-align: left;
+        
+    }
+    
+    .markdig3::after{
+        content: "vanguardia.";
+        font-weight: 800;
+        font-style: italic;
+        color: var(--color-verde-oscuro);
+        text-decoration: underline;
+    }
+
+
+
+    /*------------------------------------------*/
+    .container-quienes-somos {
+      flex-direction: column;
+      padding: 30px 0;
+      opacity: 100%;
+      transition: 1s;
+    }
+  
+    .container-quienes-somos > div {
+      background-color: var(--color-gris);
+      margin: auto;
+      width: 95%;
+      /* border: 2px solid #000000; */
+	    border-radius: 10px;
+    }
+  
+    .container-quienes-somos > div > p {
+        text-align: center;
+        padding: 10px;
+        /* border: 2px solid var(--color-verde-claro); */
+	      border-radius: 10px;
+    }
+    
+
+    /*------------------------------------------*/
+
+    header {
+        padding: 10px;
+      }
+    
+      header.abajo {
+        padding: 10px;
+      }
+    
+      .logo-gral {
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+    
+      .logo-palabra {
+        font-size: 1.5em;
+      }
+    
+      header ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+    
+      header ul li a {
+        margin: 0;
+        font-size: 1em;
+      }
+      nav ul {
+        
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      nav ul.show {
+        display: flex;
+      }
+      
+      .my-button {
+        border: 2px solid var(--color-verde-claro);
+	    border-radius: 10px;
+        display: flex;
+        color: var(--color-gris-oscuro);
+      }
+
+      /*-----------------------------------*/
+
+      #servicios {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+      
+      #servicios > h1 {
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+        color: var(--color-gris-oscuro);
+        letter-spacing: 1px;
+        font-size: var(--tamano-titulo);
+      }
+      
+      .mosaico {
+        flex: 0 0 100%;
+        background-color: var(--color-gris);
+        color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        margin-bottom: 20px;
+        transition: background-color 0.3s, border-color 0.3s;
+        border: 2px solid var(--color-gris);
+      }
+      
+      .mosaico:hover {
+        background-color: var(--color-verde-oscuro);
+        border-color: var(--color-verde-oscuro);
+      }
+      
+      .mosaico h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      
+      .mosaico p {
+        margin-bottom: 0;
+      }
+
+  }
