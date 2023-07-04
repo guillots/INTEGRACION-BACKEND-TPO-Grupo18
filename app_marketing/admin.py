@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Usuario
+from .models import Cliente
 
 # Register your models here.
-@admin.register(Usuario)
-class UsuariosAdmin(admin.ModelAdmin):
+@admin.register(Cliente)
+class ClientesAdmin(admin.ModelAdmin):
     pass
