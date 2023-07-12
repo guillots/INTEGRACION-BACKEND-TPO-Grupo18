@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/estilo.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static  './media/favicon/favicon-02.png' %}">
+    <script src="https://kit.fontawesome.com/399659288b.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <title>Creación de Usuario</title>
+</head>
+<body>
+    <header>
+        <div class="logo-gral">
+          <img class="logo-img" src="{% static './media/favicon/favicon-01.png' %}" alt="" width="100px" height="100px">
+          <a href="#" class="logo-palabra">ProDigital Strategies</a>
+        </div>
+        <nav>
+          <button class="my-button" id="my-button">
+            <i class="fas fa-bars"></i>
+        </button>
+          <ul id="mynav">
+            <li><a class="links" href="{% url 'landing_page' %}">Inicio</a></li>
+          </ul>
+        </nav>    
+      </header>
+
+      <main>
+        <form method="post" action="">
+          {% csrf_token %}
+          <input type="textbox" name="name">
+          <button type="submit" name="save">save</button>
+        </form>
+
+        <p>Plantilla para creación</p>
+
+      </main>
+
+
+
+</body>
+</html>
